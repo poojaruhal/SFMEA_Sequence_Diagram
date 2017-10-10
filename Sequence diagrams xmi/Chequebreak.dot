@@ -1,0 +1,14 @@
+digraph Chequebreak{
+ 1 [label = "START", pos="580,1020", color="red", style="filled" width="3.7", height="1.4"]
+ 2  [shape=box label = "cashCheque()\ngetAmount()\namount()\ngetBalance()\nbalance()", pos="580,850", color="orange", style="filled" width="3.7", height="1.4"]
+ 3  [shape=diamond width="2.5", height="1.5"  label = "balance < amount", pos="580,680", color="yellow", style="filled" width="2.5", height="1.5"]
+ 4  [shape=box label = "addInsufficientFundFee()\n noteReturnedCheque(cheque)", pos="580,510", color="brown", style="filled" width="3.7", height="1.4"]
+ 5  [shape=box label = "addDebitTransaction(cheque number, amount)\nstorePhotoOfCheque(cheque)\ncash()", pos="870,510", color="cyan", style="filled" width="3.7", height="1.4"]
+ 6 [label = "END", pos="580,340", color="green", style="filled" width="3.7", height="1.4"]
+ 1 -> 2 [pos="e,580,906 580,1020"]
+ 2 -> 3 [pos="e,580,740 580,850"]
+ 3 -> 4 [label = "TRUE", lp="580,595", pos="e,580,566 580,680"]
+ 3 -> 5 [label = "FALSE", lp="725,595", pos="e,870,566 580,680"]
+ 5 -> 6 [pos="e,580,396 870,510"]
+ 4 -> 6 [pos="e,580,396 580,510"]
+}

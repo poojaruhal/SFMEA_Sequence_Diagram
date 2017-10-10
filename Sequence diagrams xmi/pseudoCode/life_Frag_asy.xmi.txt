@@ -1,0 +1,15 @@
+WithDrawCash(account number,amount)
+getBalance(account Number)
+balance()
+debit(account number,amount)
+IF balance<=amount THEN
+	debitreply()
+ELSE
+	takeMoney()
+ENDIF
+depositMoney()
+depositToBank()
+UpdateBal()
+requestNewBook()
+assigned()
+
